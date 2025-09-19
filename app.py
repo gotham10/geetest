@@ -36,9 +36,6 @@ class GeeTestIdentifier:
         _, buffer = cv2.imencode('.png', self.background)
         encoded_image = base64.b64encode(buffer).decode('utf-8')
         return {
-            "position_from_left": position_from_left,
-            "position_from_bottom": position_from_bottom,
-            "coordinates": [center_x, center_y],
             "output_image_data": f"data:image/png;base64,{encoded_image}"
         }
 
